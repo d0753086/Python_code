@@ -66,6 +66,10 @@ def index():
     print(payload)
     return jsonify(payload)
     #輸出html的內容
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6140178a93505ac66c8d6c318669811d1eb20344
     #獲取json
     #整理資料
     #弄成json_return 
@@ -113,6 +117,7 @@ def sale():
         payload.append(content)
 
         #擷取優惠價格'''
+<<<<<<< HEAD
     
     #print(payload)       
     return jsonify(payload)
@@ -132,8 +137,14 @@ def get_news():
     
     payload = []
     
+=======
+>>>>>>> 6140178a93505ac66c8d6c318669811d1eb20344
     
+    #print(payload)       
+    return jsonify(payload)
+    #每日特惠 https://store.steampowered.com/search/?filter=topsellers&specials=1
     
+<<<<<<< HEAD
     
     
     
@@ -151,3 +162,14 @@ def get_news():
 #========================================================
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=3000)
+=======
+#========================================================
+@app.route('/Game_content', methods=['GET'])
+@cross_origin()
+def get_content():
+    #擷取遊戲內容
+    payload = []
+    return jsonify(payload)
+if __name__ == "__main__":
+    app.run(debug=False, host='0.0.0.0', port=3000)
+>>>>>>> 6140178a93505ac66c8d6c318669811d1eb20344
