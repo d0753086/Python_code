@@ -52,13 +52,13 @@ def index():
     time=0
     
     for result in results:
-        browser = result.get('href')#去該遊戲的網址加載內容
-        content_response = requests.get(browser)#欲加載之網頁
-        game_content_soup = BeautifulSoup(content_response.content, "html.parser")
-        Game_content = game_content_soup.html.find("div", class_="game_description_snippet")
+        #browser = result.get('href')#去該遊戲的網址加載內容
+        #content_response = requests.get(browser)#欲加載之網頁
+        #game_content_soup = BeautifulSoup(content_response.content, "html.parser")
+        #Game_content = game_content_soup.html.find("div", class_="game_description_snippet")
         #這有問題FFF
-        print(Game_content.text)
-        content = {'Id':i,'name':result.text,'url':result.get('href'),'current_servers':servers[time].text,'Game_content':Game_content.text}
+        #print(Game_content.text)
+        content = {'Id':i,'name':result.text,'url':result.get('href'),'current_servers':servers[time].text}
             #print(content)
         i = i+1
         time+=2
